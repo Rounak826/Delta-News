@@ -1,9 +1,9 @@
-
+import src from '../Assets/spinner.gif'
 
 const Spinner = (props)=>{
     return(
         <div className="spinner text-center">
-            <img src={props.src} alt="" />
+            <img src={src} alt="" />
         </div>
     );
 }

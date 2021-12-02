@@ -1,68 +1,52 @@
-import { useEffect } from 'react';
 import { useState } from 'react';
 import './App.css';
 import Footer from './Footer/Footer';
 import Nav from './Nav/Nav.jsx';
 import News from './News/News.jsx';
-import spinner from "./Assets/spinner.gif"
-import placeholder from "./Assets/placeholder.png"
-import Spinner from './spinner/Spinner';
-
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
-  const API_KEY = 'bea89a6442494002b6e2374fb42c10e1';
-  const [data ,setData] = useState(
-    {
-    
-      "status": "ok",
-      "totalResults": 1,
-      "articles": [
-        {
-          "source": {
-            "id": "default",
-            "name": "news default"
-          },
-          "author": "Author",
-          "title": "News Title",
-          "description": "News Description",
-          "url": "/",
-          "urlToImage": placeholder,
-          "publishedAt": "2021-11-29T12:12:00Z",
-          "content": null
-        }
-      ]
-    
-    
+  const [category, setCategory] = useState('general')
+  const categoryHandler = (cat) => {
+    switch (cat) {
+        case 'general': setCategory('general');
+            break;
+        case 'entertainment': setCategory('entertainment');
+            break;
+        case 'science': setCategory('science');
+            break;
+        case 'sports': setCategory('sports');
+            break;
+        case 'buisness': setCategory('business');
+            break;
+        case 'technology': setCategory('technology');
+            break;
+        default: setCategory('general');
+            break;
     }
-  );
-const [country, setCountry] = useState('in');
-const [category, setCategory] =useState('general')
-const [pageSize, setPageSize] = useState('8');
-const [page,setPage] = useState(1);
-const [loading,setLoading] =useState(false);
-let fetchData=async ()=>{
-  setLoading(true);
-  let url = `https://newsapi.org/v2/top-headlines?category=${category}&country=${country}&apiKey=${API_KEY}&pageSize=${pageSize}&page=${page}`;
-  let data = await fetch(url);
-  let resData =await data.json();
-  console.log(resData);
-  setData(resData);
-  setLoading(false);
-  return await resData;
+    console.log(category);
 }
-
-useEffect(() => {
-  fetchData();
-}, [])
-
-return (
+  return (
+    
+    <Router>
     <div className="App">
-      <Nav loading ={loading} />
-      {console.log(loading),loading && <Spinner src={spinner}/>}
-      <News data={data}/>
+    
+      <Nav catHandler={categoryHandler} />
+      <Routes>
+        <Route path='/' element={<News category='general'/>}/>
+        <Route path='/buisness' element={<News category={category}/>}/>
+        <Route path='/entertainment' element={<News category={category}/>}/>
+        <Route path='/technology' element={<News category={category}/>}/>
+        <Route path='/sports' element={<News category={category}/>}/>
+      </Routes>
       <Footer />
-      
+
     </div>
+    </Router>
   );
 }
 

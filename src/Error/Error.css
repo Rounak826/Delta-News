@@ -1,0 +1,14 @@
+.Error{
+    width: 60%;
+    border: grey solid 1px;
+    border-radius: 20px;
+    padding:1rem;
+    margin:3rem auto;
+}
+.Error img{
+    width: 50%;
+}
+.Error p{
+    padding:3rem ;
+    text-align: center;
+}
