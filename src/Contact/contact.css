@@ -1,0 +1,128 @@
+.contact{
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:#E7F9F4;
+    height: 100vh;
+
+}
+.content{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.content .text{
+    width: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+   
+}
+.content .text .illustration img{
+    width: 85%;
+}
+.content .form{
+    width: 50%;
+    
+}
+.content .form form{
+    
+    padding: 0 8rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+.content .form form input{
+    margin-bottom: 1.5rem;
+    border-color: rgb(199, 199, 199);
+    border-style: solid ;
+    border-radius: 0.3rem;
+    height: 40px;
+}
+.content .form form textarea{
+    margin-bottom: 1.5rem;
+    border-color: rgb(199, 199, 199);
+    border-style: solid ;
+    border-radius: 0.3rem;
+    height: 100px;
+}
+.content .form form label{
+    margin-bottom: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color:  #fc6e20;
+}
+.button{
+    background-color: #06112D ;
+    font-size: 20px;
+    width: 10rem;
+    transition: all 0.3s linear;
+    border-style: none;
+    color: honeydew;
+}
+.button:hover{
+    background-color: #fc6e20;
+  }
+
+  @media only screen and (max-width: 450px) {
+     
+      .content .text{
+        width: 100%;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+       
+    }
+    .content .form{
+        width: 100%;
+        
+    }
+    .content .form form{
+    
+        padding: 0 1rem;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .content .form form input{
+        margin-bottom: 0.5rem;
+        border-color: rgb(199, 199, 199);
+        border-style: solid ;
+        border-radius: 0.3rem;
+        height: 30px;
+    }
+    .content .form form textarea{
+        margin-bottom: 1.5rem;
+        border-color: rgb(199, 199, 199);
+        border-style: solid ;
+        border-radius: 0.3rem;
+        height: 80px;
+    }
+    .content .form form label{
+        margin-bottom: 0.2rem;
+        font-size: 0.9rem;
+        font-weight: bold;
+        color:  #9f8fff;
+    }
+    .button{
+        background-color: #7562E0 ;
+        font-size: 16px;
+        width: 8rem;
+
+        transition: all 0.3s linear;
+        border-style: none;
+        color: honeydew;
+    }
+    .content .text .illustration img{
+        width: 100%;
+    }
+  }
