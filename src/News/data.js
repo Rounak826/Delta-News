@@ -1,6 +1,5 @@
 
 const dummyData = (category, page)=>{
-
     let data = {
 
         'general': {
@@ -1998,7 +1997,7 @@ const dummyData = (category, page)=>{
          }               
         }
     let resData = data[category][page];
-    console.log('dummy',resData);
+    console.log('dummy',category,page,resData);
     return new Promise(function(myResolve, myReject) {
       
         if (category) {

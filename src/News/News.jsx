@@ -85,6 +85,7 @@ const News = (props) => {
     let fetchMoreData = async () => {
         setPage(page + 1);
         let resData={};
+
         try{
             let url = `https://newsapi.org/v2/top-headlines?category=${props.category}&country=${country}&apiKey=${API_KEY}&pageSize=${pageSize}&page=${page}`;
             let data = await fetch(url);
@@ -99,7 +100,11 @@ const News = (props) => {
             if(corsNotAllowed) {throw new Error(data.status, resData.message)};
 
         }catch{
+
             resData = await dummyData(props.category,page);
+            if(page===3){
+                setPage(1);
+            }
             setStatus(
                 {
                     noError:resData.status === 'ok',
@@ -128,8 +133,8 @@ const News = (props) => {
      */
     useEffect(() => {
       if(!isDeepEqual(prevCategory.current, props.category)){
-        fetchNews();
         setPage(1);
+        fetchNews();
         setArticles([]);
         prevCategory.current= props.category;
       }
