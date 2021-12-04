@@ -3,6 +3,7 @@ import './App.css';
 import Footer from './Footer/Footer';
 import Nav from './Nav/Nav.jsx';
 import News from './News/News.jsx';
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -28,7 +29,7 @@ function App() {
         default: setCategory('general');
             break;
     }
-    console.log(category);
+    
 }
   return (
     

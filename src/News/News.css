@@ -1,3 +1,6 @@
+h1{
+    color:#fc6e20;
+}
 .news{
     display: flex;
     flex-direction: row;
@@ -9,6 +12,12 @@
 .row{
     margin-left: 0;
     margin-right: 0;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
+
+@media only screen and (max-width: 600px) {
+    h1{
+        font-size: 1.9rem;
+    }
 }

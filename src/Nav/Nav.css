@@ -1,0 +1,11 @@
+nav{
+    color:#fc6e20;
+    position: fixed;
+    top:0;
+}
+.navbar-light .navbar-nav .nav-link{
+    color:#fc6e20;
+}
+.bg-light{
+    background-color: #f6f5ef;
+}

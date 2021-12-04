@@ -1,6 +1,6 @@
 footer-clean {
     padding:50px 0;
-    background-color:#fff;
+    background-color:#F8F9FA;
     color:#4b4c4d;
   }
   
@@ -29,8 +29,8 @@ footer-clean {
     opacity:1;
   }
   
-  .footer-clean .item.social {
-    text-align:right;
+  .footer-clean .item.social a{
+    margin-left: 4  px;
   }
   
   @media (max-width:767px) {
@@ -55,7 +55,7 @@ footer-clean {
     text-align:center;
     border-radius:50%;
     border:1px solid #ccc;
-    margin-left:10px;
+    margin-left:6px;
     margin-top:22px;
     color:inherit;
     opacity:0.75;

@@ -2,4 +2,40 @@
     display: flex;
     height: 100%;
     justify-content: stretch;
+    background-color: #E7F9F4;
 }
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+.card-img-top{
+    padding:0rem;
+}
+.card h5{
+    font-size: 1.1rem;
+}
+.card p{
+    font-size: 0.9rem;
+}
+.card-footer{
+    background-color:#06112D;
+    color: floralwhite;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0;
+}
+.card-footer a{
+    width: 100%;
+} 
+@media only screen and (max-width: 600px) {
+    .card h5{
+        font-size: 0.9rem;
+    }
+    .card p{
+        font-size: 0.7rem;
+    }
+  }
