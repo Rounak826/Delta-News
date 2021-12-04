@@ -72,9 +72,11 @@
 
   @media only screen and (max-width: 450px) {
      
-      .content .text{
+    .content{
+        flex-direction:column;
+    }
+    .content .text{
         width: 100%;
-        
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -111,16 +113,13 @@
         margin-bottom: 0.2rem;
         font-size: 0.9rem;
         font-weight: bold;
-        color:  #9f8fff;
+
     }
     .button{
-        background-color: #7562E0 ;
+
         font-size: 16px;
         width: 8rem;
 
-        transition: all 0.3s linear;
-        border-style: none;
-        color: honeydew;
     }
     .content .text .illustration img{
         width: 100%;
