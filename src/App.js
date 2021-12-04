@@ -10,6 +10,7 @@ import {
   Route,
 } from "react-router-dom";
 import Contact from './Contact/Contact';
+import About from './About/About';
 
 function App() {
   const [category, setCategory] = useState('general')
@@ -45,6 +46,7 @@ function App() {
         <Route path='/technology' element={<News category={category}/>}/>
         <Route path='/sports' element={<News category={category}/>}/>
         <Route path='/contact' element={<Contact/>}/>
+        <Route path='/about' element={<About/>}/>
       </Routes>
       <Footer />
 

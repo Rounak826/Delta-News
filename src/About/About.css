@@ -1,0 +1,38 @@
+.about{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+.about hr{
+    color: #fc6e20;
+    background-color: #fc6e20;
+}
+.about .text{
+    width: 50%;
+}
+.about .img{
+    width: 50%;
+
+}
+.about .img img{
+    width: 50%;
+}
+
+@media only screen and (max-width: 600px) {
+        .about{
+            flex-direction: column-reverse;
+
+        }
+        .about .text{
+            width: 100%;
+        }
+        .about .img{
+            width: 100%;
+        }
+        .about .img img{
+            width: 80%;
+        }
+
+  }
