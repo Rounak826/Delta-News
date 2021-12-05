@@ -7,6 +7,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import dummyData from './data';
 import Error from '../Error/Error.jsx'
 import errorImg from '../Assets/404.svg'
+import { Link } from 'react-router-dom';
 var isDeepEqual = require('fast-deep-equal');
 let key = 0;
 
@@ -160,7 +161,7 @@ const News = (props) => {
     return (
         <>
             {corsNotAllowed&&<div className="alert alert-warning alert-dismissible fade show" role="alert">
-                This is old Data from newsApi.org <a href="/know" className="alert-link">know more</a>. click to know more.
+                This is old Data from newsApi.org <Link to="/know" className="alert-link">know more</Link>. click to know more.
                 <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>}
             <h1>Top {props.category}-News</h1>
