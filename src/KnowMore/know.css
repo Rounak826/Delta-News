@@ -1,0 +1,14 @@
+.know{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.know .img{
+    width: 50%;
+}
+.know .img img{
+    width: 70%;
+}
+.know .text{
+    width: 50%;
+}

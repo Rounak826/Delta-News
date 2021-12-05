@@ -10,5 +10,6 @@
 }
 .Error p{
     padding:3rem ;
+    padding-bottom: 1rem;
     text-align: center;
 }

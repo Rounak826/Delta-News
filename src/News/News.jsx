@@ -6,6 +6,7 @@ import Spinner from '../spinner/Spinner';
 import { useState, useEffect, useRef, useCallback } from 'react';
 import dummyData from './data';
 import Error from '../Error/Error.jsx'
+import errorImg from '../Assets/404.svg'
 var isDeepEqual = require('fast-deep-equal');
 let key = 0;
 
@@ -14,8 +15,8 @@ let key = 0;
 
 let corsNotAllowed= false;
 const News = (props) => {
-  
-    const API_KEY = 'bea89a6442494002b6e2374fb42c10e1';
+  //put your api key here
+    const API_KEY = '';
     const [data, setData] = useState(
         {
 
@@ -159,7 +160,7 @@ const News = (props) => {
     return (
         <>
             {corsNotAllowed&&<div className="alert alert-warning alert-dismissible fade show" role="alert">
-                This is old Data from newsApi.org <a href="/know-more" className="alert-link">know more</a>. click to know more.
+                This is old Data from newsApi.org <a href="/know" className="alert-link">know more</a>. click to know more.
                 <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>}
             <h1>Top {props.category}-News</h1>
@@ -182,7 +183,7 @@ const News = (props) => {
                         }
                     </div>
                 </div>
-            </InfiniteScroll> : <Error message={data.message} />}
+            </InfiniteScroll> : <Error head={'Oops! Cant Find Any News Right Now'} message={data.message} img={errorImg} />}
 
         </>
 
